@@ -1,39 +1,7 @@
+{% extends 'paginas/modelo.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROF X</title>
-    <link rel="stylesheet" href="{% static 'estilo.css' %}">
-
-<style>
-    a{
-        padding-bottom: 20px;
-        display: inline-block;
-        background-color: lavender;
-    }
-
-    a:hover{
-        background-color: rgb(200, 246, 252);
-        padding-bottom: 20px;
-        border-style: groove;
-        
-    }
-</style>
-
-
-</head>
-
-<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"
-
-
-<body>
-    
-<div class="container">
+{% block conteudo %}
 
     <h2>BLOG PARA UM PROFESSOR</h2>
     <h3>Bem vindo(a)!</h3>
@@ -49,10 +17,5 @@
    <img src= "https://png.pngtree.com/png-vector/20191001/ourlarge/pngtree-book-icon-outline-style-png-image_1773810.jpg" width="450">
    </a>
 
-    <body backgroundcolor="FloralWhite">
-
-    </div>
-
-</body>
-
-</html>
+   {% endblock %}
+  

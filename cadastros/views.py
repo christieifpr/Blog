@@ -1,4 +1,4 @@
-from .models import Material, Disciplina
+from .models import Disciplina, Material
 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
@@ -26,6 +26,28 @@ class DisciplinaDelete(DeleteView):
 class DisciplinaList(ListView):
     model = Disciplina
     template_name = 'cadastros/form.html'
-        
 
 
+
+class MaterialCreate(CreateView):
+    model = Material
+    fields = ['nome do material']
+    template_name = 'cadastros/form.html'
+    success_url = reverse_lazy('index')  
+    #pra qual pag vc vai mandar o usuario
+
+
+class MaterialUpdate(UpdateView):
+    model = Material
+    fields = ['nome']
+    template_name = 'cadastros/form.html'
+    success_url = reverse_lazy('index')  
+
+class MaterialDelete(DeleteView):
+    model = Material
+    template_name = 'cadastros/form.html'
+    success_url = reverse_lazy('index')     
+
+class MaterialList(ListView):
+    model = Material
+    template_name = 'cadastros/form.html'

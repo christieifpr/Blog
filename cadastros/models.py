@@ -13,6 +13,9 @@ class Material(models.Model):
     arquivo = models.FileField()
     data = models.DateTimeField(auto_now_add=True)
     disciplina = models.ForeignKey(Disciplina, on_delete= models.PROTECT)
+    
+    #aquiiii
+    material = models.CharField(max_length=100, verbose_name='MATERIALLL')
 
     def __str__(self):
         return "{}/{}".format(self.descricao, self.disciplina)
